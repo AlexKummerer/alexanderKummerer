@@ -20,3 +20,34 @@
         transform: scale(1.1);
     }
 }
+
+.slideshow-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    display: flex;
+    align-items: center;
+    p {
+        margin-left: 120px;
+        max-width: 600px;
+        color: white;
+        font-size: 80px;
+        padding-left: 32px;
+        border-left: 8px solid #d85050;
+    }
+}
+
+.fadeIn {
+    animation: fadeInAnimation 1s ease-in-out;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
