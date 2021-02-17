@@ -1,21 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  selector: 'app-navigation-bar',
+  templateUrl: './navigation-bar.component.html',
+  styleUrls: ['./navigation-bar.component.scss']
 })
-export class MenuComponent implements OnInit {
-  @Input() darkMode = true;
+export class NavigationBarComponent {
 
-  ngOnInit(): void {
-  }
-
-  
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -25,4 +19,3 @@ export class MenuComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }
-

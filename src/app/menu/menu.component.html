@@ -1,12 +1,31 @@
+<!--    
 <header [class.headerDark]="darkMode">
     <img *ngIf="!darkMode" routerLink="/" src="assets/img/logo_black.png" alt="" />
     <img *ngIf="darkMode" routerLink="/" src="assets/img/logo_black.png" alt="" />
 
     <div [class.darkLinks]="darkMode">
         <a routerLink="/">Home</a>
-        <!--<a href="#">Curriculum</a>-->
-        <!--<a href="#">Projects</a>-->
-        <a routerLink="/data-protection">Data Protection</a>
-        <a routerLink="/imprint">Imprint</a>
-    </div>
+        <a href="#">Curriculum</a>-->
+<!--<a href="#">Projects</a>
+<a routerLink="/data-protection">Data Protection</a>
+<a routerLink="/imprint">Imprint</a>
+</div>
+</header>
+-->
+
+
+<header [class.headerDark]="darkMode">
+
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <img *ngIf="!darkMode" routerLink="/" src="assets/img/logo_black.png" alt="" />
+            <img *ngIf="darkMode" routerLink="/" src="assets/img/logo_black.png" alt="" />
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar-row>
+
+    </mat-toolbar>
+
 </header>

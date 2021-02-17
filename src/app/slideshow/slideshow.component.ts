@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlideshowComponent implements OnInit {
 
-  images = ['img1.jpg', 'img2.jpg', 'img3.jpg'];
+  images = ["img2.jpg"];
   currentImage = 0;
   showImage = true;
   headlines = [
@@ -15,10 +15,27 @@ export class SlideshowComponent implements OnInit {
     'Started to Code November 2020',
     'Bring with me, engineering on the next level',
   ];
+  currentHeadline = 0;
+  showHeadline = true;
 
   ngOnInit() {
     this.updateImage();
+   this.updateHeadline();
   }
+  updateHeadline() {
+    setInterval(() => {
+      this.currentHeadline++;
+      this.currentHeadline = this.currentHeadline % this.headlines.length;
+      this.showHeadline = false;
+
+      setTimeout(() => {
+        this.showHeadline = true;
+      }, 3);
+    }, 5000);
+
+
+  }
+
 
   updateImage() {
     setInterval(() => {
@@ -28,7 +45,7 @@ export class SlideshowComponent implements OnInit {
 
       setTimeout(() => {
         this.showImage = true;
-      }, 5);
+      }, 3);
     }, 5000);
   }
 }

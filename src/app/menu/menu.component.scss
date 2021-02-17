@@ -10,6 +10,9 @@ header {
     justify-content: space-between;
     padding-left: 120px;
     padding-right: 120px;
+    .example-spacer {
+        flex: 1 1 auto;
+    }
     a {
         color: white;
         text-decoration: none;
@@ -22,6 +25,9 @@ header {
     img {
         height: 50px;
         cursor: pointer;
+    }
+    .mat-toolbar {
+        background: transparent !important;
     }
 }
 
