@@ -18,6 +18,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { PortfolioSecionComponent } from './portfolio-secion/portfolio-secion.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ProjectsComponent } from './projects/projects.component';
     NavigationBarComponent,
     HomeComponent,
     ProjectsComponent,
+    PortfolioSecionComponent,
   ],
   imports: [
     BrowserModule,
