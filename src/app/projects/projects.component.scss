@@ -16,6 +16,8 @@ p {
     float: left;
     width: 30%;
     text-align: left;
+    margin-left: 0%;
+    margin-bottom: 3em;
     hr {
         width: 30%;
         margin: 1.875em 0;
@@ -45,6 +47,7 @@ p {
         //text-align: center;
     }
     button {
+        text-align: center;
         width: 16%;
         //margin: 1.875em 1.5em 3.75em 1.5em;
         border: 2px solid #cd3944;
@@ -68,6 +71,8 @@ p {
     z-index: 1;
     background: #fff;
     border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: space-between;
     img {
         max-width: 100%;
         margin-left: 10%;
@@ -85,5 +90,131 @@ p {
         padding: 0 15%;
         color: #706f6f;
         font-size: 1.375em;
+    }
+}
+
+@media (max-width: 1500px) {
+    .portfolio {
+        text-align: center;
+        display: inline;
+        img {
+            max-width: 100%;
+            margin-left: 0%;
+        }
+    }
+    .info-contianer {
+        float: left;
+        width: 65%;
+        text-align: center;
+        margin-left: 17%;
+        margin-bottom: 3em;
+        hr {
+            width: 10%;
+            margin: 1.875em 0;
+            text-align: center;
+            background-color: #c5c5c5;
+            height: 0.0625em;
+            border: none;
+            margin-left: 45%;
+            margin-bottom: 1.5625em;
+        }
+        h3 {
+            font-size: 1.875em;
+            text-align: center;
+            font-weight: 500;
+            color: #3b3838;
+            margin-bottom: 0.83333em;
+        }
+        p {
+            text-align: center;
+            width: 100%;
+            margin-left: 0;
+            font-size: 1.3em;
+        }
+        button {
+            border: 2px solid #cd3944;
+            width: 25%;
+            &:hover {
+                background-color: #cd3944;
+                color: white;
+            }
+        }
+        .js-doc {
+            text-decoration: none;
+            font-size: 0.875em;
+            width: 25% !important;
+        }
+        .show-project {
+            width: 25% !important;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .info-contianer {
+        button {
+            border: 2px solid #cd3944;
+            width: 25%;
+            &:hover {
+                background-color: #cd3944;
+                color: white;
+            }
+        }
+        .js-doc {
+            text-decoration: none;
+            font-size: 0.875em;
+            width: 25% !important;
+        }
+        .show-project {
+            width: 25% !important;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .info-contianer {
+        button {
+            border: 2px solid #cd3944;
+            width: 80%;
+            &:hover {
+                background-color: #cd3944;
+                color: white;
+            }
+        }
+        .js-doc {
+            text-decoration: none;
+            font-size: 0.875em;
+            width: 40% !important;
+        }
+        .show-project {
+            width: 40% !important;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .info-contianer {
+        width: 90%;
+        text-align: center;
+        margin-left: 5%;
+        button {
+            border: 2px solid #cd3944;
+            width: 80%;
+            &:hover {
+                background-color: #cd3944;
+                color: white;
+            }
+        }
+        .js-doc {
+            text-decoration: none;
+            font-size: 0.875em;
+            width: 95% !important;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 2em;
+        }
+        .show-project {
+            width: 95% !important;
+        }
     }
 }
