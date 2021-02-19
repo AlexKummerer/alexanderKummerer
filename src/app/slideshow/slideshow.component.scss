@@ -27,6 +27,7 @@
     display: flex;
     align-items: center;
     p {
+        margin-top: 250px;
         margin-left: 120px;
         max-width: 600px;
         color: white;
@@ -48,5 +49,42 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media ( max-width: 1000px) {
+    .slideshow-overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: flex-start;
+        p {
+            margin-left: 25px;
+            max-width: 600px;
+            color: white;
+            font-size: 40px;
+            padding-left: 32px;
+            border-left: 8px solid #cd3944;
+        }
+    }
+}
+
+@media ( max-width: 600px) {
+    .slideshow-overlay {
+        p {
+            margin-left: 25px;
+            max-width: 260px;
+            font-size: 25px;
+        }
+    }
+}
+
+@media ( max-width: 400px) {
+    .slideshow-overlay {
+        p {
+            margin-left: 25px;
+            max-width: 90px;
+            font-size: 20px;
+        }
     }
 }

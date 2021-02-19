@@ -41,3 +41,23 @@ p {
     font-size: 0.875em;
     line-height: 1.5em;
 }
+
+.page-wrap {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1600px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #3b3838;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 0.625em;
+    text-transform: uppercase;
+}
+
+p {
+    color: #706f6f;
+    font-size: 1.375em;
+}

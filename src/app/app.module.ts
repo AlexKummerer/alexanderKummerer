@@ -12,13 +12,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PortfolioSecionComponent } from './portfolio-secion/portfolio-secion.component';
+import { PortfolioHeaderComponent } from './portfolio-header/portfolio-header.component';
+import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -28,10 +31,13 @@ import { PortfolioSecionComponent } from './portfolio-secion/portfolio-secion.co
     ImprintComponent,
     DataProtectionComponent,
     AboutMeComponent,
-    NavigationBarComponent,
+  
     HomeComponent,
     ProjectsComponent,
     PortfolioSecionComponent,
+    PortfolioHeaderComponent,
+    PortfolioProjectComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

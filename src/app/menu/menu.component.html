@@ -16,13 +16,13 @@
 
 <header [class.headerDark]="darkMode">
 
-    <mat-toolbar>
+    <mat-toolbar class="page-wrap">
         <mat-toolbar-row>
             <img *ngIf="!darkMode" routerLink="/" src="assets/img/logo_black.png" alt="" />
             <img *ngIf="darkMode" routerLink="/" src="assets/img/logo_black.png" alt="" />
             <span class="example-spacer"></span>
             <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon>menu</mat-icon>
+                <mat-icon class="icon">menu</mat-icon>
             </button>
         </mat-toolbar-row>
 
