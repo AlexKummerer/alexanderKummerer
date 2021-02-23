@@ -24,6 +24,12 @@ import { FooterComponent } from './footer/footer.component';
 import { MoreComponent } from './more/more.component';
 import { AboutDetailsComponent } from './about-details/about-details.component';
 
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,6 @@ import { AboutDetailsComponent } from './about-details/about-details.component';
     ImprintComponent,
     DataProtectionComponent,
     AboutMeComponent,
-  
     HomeComponent,
     ProjectsComponent,
     PortfolioSecionComponent,
@@ -42,6 +47,7 @@ import { AboutDetailsComponent } from './about-details/about-details.component';
     FooterComponent,
     MoreComponent,
     AboutDetailsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,12 @@ import { AboutDetailsComponent } from './about-details/about-details.component';
     MatButtonModule,
     LayoutModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
