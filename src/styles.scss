@@ -20,6 +20,7 @@ $alexanderKummerer-theme: mat-light-theme(( color: ( primary: $alexanderKummerer
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($alexanderKummerer-theme);
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -45,7 +46,6 @@ p {
 .page-wrap {
     margin: 0 auto;
     width: 90%;
-    max-width: 1600px;
 }
 
 h1 {

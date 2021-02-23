@@ -1,0 +1,129 @@
+.bottom {
+    display: flex;
+    .about {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ad1911;
+        height: 65vh;
+        width: 50%;
+        &:hover {
+            cursor: pointer;
+            .circle {
+                border-radius: 0;
+            }
+        }
+        h2 {
+            font-size: 40px;
+            color: #151850;
+        }
+        h5 {
+            font-size: 25px;
+            font-family: Playfair Display;
+            letter-spacing: 0;
+            color: #151850;
+        }
+        .circle {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 15px solid #151850;
+            border-radius: 50%;
+            width: 450px;
+            height: 450px;
+            transition: all 225ms ease-in-out;
+        }
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 10;
+        }
+    }
+    .contact {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #151850;
+        height: 65vh;
+        width: 50%;
+        &:hover {
+            cursor: pointer;
+            .circle {
+                border-radius: 0;
+            }
+        }
+        h2 {
+            font-size: 40px;
+            color: #ad1911;
+        }
+        h5 {
+            font-size: 25px;
+            font-family: Playfair Display;
+            letter-spacing: 0;
+            color: #ad1911;
+        }
+        .circle {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 15px solid #ad1911;
+            border-radius: 50%;
+            width: 450px;
+            height: 450px;
+            transition: all 225ms ease-in-out;
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .bottom {
+        flex-direction: column;
+        .about {
+            width: 100% !important;
+        }
+        .contact {
+            width: 100% !important;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .bottom {
+        .about {
+            .circle {
+                width: 250px;
+                height: 250px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            h5 {
+                font-size: 18px;
+                font-family: Playfair Display;
+                letter-spacing: 0;
+            }
+        }
+        .contact {
+            .circle {
+                width: 200px;
+                height: 200px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            h5 {
+                font-size: 18px;
+                font-family: Playfair Display;
+                letter-spacing: 0;
+            }
+        }
+    }
+}

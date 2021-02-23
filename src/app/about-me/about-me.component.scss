@@ -1,0 +1,56 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    .img {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        width: 50%;
+    }
+    img {
+        object-fit: cover;
+        max-width: 75%;
+        height: 75%;
+    }
+    .about {
+        background-color: #151850;
+        width: 50%;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-family: Playfair Display, serif;
+            font-size: 50px;
+            line-height: 50px;
+            font-weight: 400;
+            color: #efeee5;
+        }
+        p {
+            color: white;
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .head {
+        flex-direction: column;
+        .img {
+            width: 95%;
+        }
+        img {
+            object-fit: cover;
+            max-width: 65%;
+            height: 75%;
+        }
+        .about {
+            width: 95%;
+            padding: 0 16 px;
+            h1 {
+                font-size: 35px;
+            }
+        }
+    }
+}

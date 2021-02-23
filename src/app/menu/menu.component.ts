@@ -10,7 +10,6 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  @Input() darkMode = true;
 
   ngOnInit(): void {
   }

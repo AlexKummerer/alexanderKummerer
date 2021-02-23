@@ -21,6 +21,8 @@ import { PortfolioSecionComponent } from './portfolio-secion/portfolio-secion.co
 import { PortfolioHeaderComponent } from './portfolio-header/portfolio-header.component';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
 import { FooterComponent } from './footer/footer.component';
+import { MoreComponent } from './more/more.component';
+import { AboutDetailsComponent } from './about-details/about-details.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { FooterComponent } from './footer/footer.component';
     PortfolioHeaderComponent,
     PortfolioProjectComponent,
     FooterComponent,
+    MoreComponent,
+    AboutDetailsComponent,
   ],
   imports: [
     BrowserModule,
