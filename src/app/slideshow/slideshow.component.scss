@@ -98,11 +98,26 @@
     display: flex;
     justify-content: center;
     font-size: 75px;
-    bottom: 90px;
+    bottom: 120px;
     color: rgba(255, 255, 255, 1);
     opacity: 0.4;
 }
 
 a {
     text-decoration: none;
+}
+
+.fadeDown {
+    animation: fadeDownAnimation 1.5s infinite;
+}
+
+@keyframes fadeDownAnimation {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0.5;
+        transform: translateY(20px);
+    }
 }

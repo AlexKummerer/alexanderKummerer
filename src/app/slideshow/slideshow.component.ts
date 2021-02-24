@@ -3,24 +3,28 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-slideshow',
   templateUrl: './slideshow.component.html',
-  styleUrls: ['./slideshow.component.scss']
+  styleUrls: ['./slideshow.component.scss'],
 })
 export class SlideshowComponent implements OnInit {
-
-  images = ["img2.jpg"];
+  images = ['img2.jpg'];
   currentImage = 0;
   showImage = true;
   headlines = [
     "I'm Alexander Kummerer",
+    'German Front-End Developer',
     'Started to Code November 2020',
-    'Bring with me, engineering on the next level',
+    'Turn your ideas into reality',
   ];
   currentHeadline = 0;
   showHeadline = true;
+  downward = ['arrow_downward'];
+  currentarrow = 0;
+  showArrow = true;
 
   ngOnInit() {
     this.updateImage();
-   this.updateHeadline();
+    this.updateHeadline();
+    this.updateArrow();
   }
   updateHeadline() {
     setInterval(() => {
@@ -32,8 +36,6 @@ export class SlideshowComponent implements OnInit {
         this.showHeadline = true;
       }, 3);
     }, 5000);
-
-
   }
 
   updateImage() {
@@ -47,6 +49,14 @@ export class SlideshowComponent implements OnInit {
       }, 3);
     }, 5000);
   }
+  updateArrow() {
+    setInterval(() => {
+      this.currentarrow++;
+      this.currentarrow = this.currentarrow % this.downward.length;
+      this.showArrow = false;
+      setTimeout(() => {
+        this.showArrow = true;
+      }, 3);
+    }, 5000);
+  }
 }
-
-
