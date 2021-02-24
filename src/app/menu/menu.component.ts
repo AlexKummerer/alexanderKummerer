@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -10,10 +11,15 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+  @Output() emitOverlay = new EventEmitter<boolean>();
+  overlay = false;
+  @Input() url: string | undefined;
 
-  ngOnInit(): void {
+
+  toggleOverlay() {
+    this.overlay = !this.overlay;
+    this.emitOverlay.emit(this.overlay);
   }
-
   
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -21,7 +27,16 @@ export class MenuComponent implements OnInit {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, public router: Router) {}
 
+ 
+
+  ngOnInit(){
+    
+  }
+
+
+
+  
 }
 

@@ -27,12 +27,12 @@ $alexanderKummerer-theme: mat-light-theme(( color: ( primary: $alexanderKummerer
 html,
 body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: "Roboto", "Helvetica", sans-serif;
-    scroll-behavior: smooth;
 }
 
 h3 {
@@ -61,4 +61,16 @@ h1 {
 p {
     color: #706f6f;
     font-size: 1.375em;
+}
+
+.light {
+    color: white;
+}
+
+.active {
+    opacity: 1 !important;
+}
+
+.overlay-y-hidden {
+    overflow-y: hidden !important;
 }

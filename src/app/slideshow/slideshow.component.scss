@@ -27,6 +27,7 @@
     display: flex;
     align-items: center;
     p {
+        line-height: 90px;
         //margin-top: 250px;
         margin-left: 120px;
         max-width: 600px;
@@ -57,9 +58,9 @@
         position: absolute;
         background-color: rgba(0, 0, 0, 0.4);
         display: flex;
-        align-items: flex-start;
+        //align-items: flex-end;
         p {
-            margin-top: 250px;
+            //margin-bottom: 250px;
             margin-left: 25px;
             max-width: 600px;
             color: white;
@@ -73,6 +74,8 @@
 @media ( max-width: 600px) {
     .slideshow-overlay {
         p {
+            line-height: 40px !important;
+            line-height: 90px;
             margin-left: 25px;
             max-width: 260px;
             font-size: 25px;
@@ -95,8 +98,9 @@
     display: flex;
     justify-content: center;
     font-size: 75px;
-    bottom: 150px;
+    bottom: 90px;
     color: rgba(255, 255, 255, 1);
+    opacity: 0.4;
 }
 
 a {
