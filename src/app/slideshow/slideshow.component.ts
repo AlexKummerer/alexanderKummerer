@@ -1,4 +1,11 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-slideshow',
@@ -6,8 +13,6 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   styleUrls: ['./slideshow.component.scss'],
 })
 export class SlideshowComponent implements OnInit {
-
-
   images = ['img2.jpg'];
   currentImage = 0;
   showImage = true;
@@ -22,7 +27,7 @@ export class SlideshowComponent implements OnInit {
   downward = ['arrow_downward'];
   currentarrow = 0;
   showArrow = true;
-
+  @Input() portfolio: any;
 
   ngOnInit() {
     this.updateImage();
@@ -63,7 +68,8 @@ export class SlideshowComponent implements OnInit {
     }, 5000);
   }
 
-  scroll(el: HTMLElement) {
-    el.scrollIntoView();
+  scroll() {
+    console.log(this.portfolio);
+    window.scrollTo();
   }
 }
