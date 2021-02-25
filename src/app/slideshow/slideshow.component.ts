@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-slideshow',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slideshow.component.scss'],
 })
 export class SlideshowComponent implements OnInit {
+
+
   images = ['img2.jpg'];
   currentImage = 0;
   showImage = true;
@@ -20,6 +22,7 @@ export class SlideshowComponent implements OnInit {
   downward = ['arrow_downward'];
   currentarrow = 0;
   showArrow = true;
+
 
   ngOnInit() {
     this.updateImage();
@@ -58,5 +61,9 @@ export class SlideshowComponent implements OnInit {
         this.showArrow = true;
       }, 3);
     }, 5000);
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
   }
 }

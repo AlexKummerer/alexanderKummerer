@@ -20,13 +20,15 @@ header {
             color: rgba(255, 255, 255, 0.8);
         }
     }
-    img {
-        height: 50px;
-        cursor: pointer;
-    }
-    .mat-toolbar {
-        background: transparent !important;
-    }
+}
+
+img {
+    height: 50px;
+    cursor: pointer;
+}
+
+.mat-toolbar {
+    background: transparent !important;
 }
 
 .material-icons {

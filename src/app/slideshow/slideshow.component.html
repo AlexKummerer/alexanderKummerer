@@ -1,4 +1,4 @@
-<div class="slideshow-container">
+<div #target class="slideshow-container">
     <img *ngIf="showImage" class="img-slideshow" src="assets/img/{{ images[currentImage] }}" />
 </div>
 
@@ -10,7 +10,6 @@
 
 </div>
 
-<a href="#potfolio-disc">
-    <span class="material-icons fadeDown" title="Portfolio">
-        {{downward[currentarrow]}}
-</span></a>
+<span #arrowBtn class="material-icons fadeDown" title="Portfolio">
+    {{downward[currentarrow]}}
+</span>

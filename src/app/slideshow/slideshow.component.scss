@@ -121,3 +121,9 @@ a {
         transform: translateY(20px);
     }
 }
+
+span {
+    &:hover {
+        cursor: pointer;
+    }
+}

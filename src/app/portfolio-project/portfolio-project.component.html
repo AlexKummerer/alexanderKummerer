@@ -1,19 +1,18 @@
-<article class="portfolio">
-    <div class="page-wrap">
-        <div class="info-contianer">
-            <h3>El Pollo Loco</h3>
-            <hr />
-            <p>
-                This is an Mexican Jump and Run Game. You have to Jump over chicken and collect botlles. At the End of the Game you have to fight against a Pollo Loco.
-            </p>
-            <p>The language is Javascript</p>
-            <button href="#" mat-stroked-button color="warn" class="js-doc">
-      JS DOC
-    </button>
-            <button onclick="location.href='http://alexander-kummerer.developerakademie.com/el_pollo_loco/index.html'" mat-stroked-button color="warn" class="show-project">
-      SHOW PROJECT
-    </button>
+<div *ngFor="let project of projects">
+    <article class="portfolio">
+        <div class="page-wrap">
+            <div class="info-contianer">
+                <h3>{{project.name}}</h3>
+                <hr/>
+                <p>{{project.discription}}</p>
+                <br>
+                <br>
+                <a href="{{project.JsDoc}}" target="_blank"><button href="#" mat-stroked-button color="warn" class="js-doc">JS DOC</button> </a>
+                <a href="{{project.link}}" target="_blank"> <button mat-stroked-button color="warn" class="show-project">
+               SHOW PROJECT
+            </button></a>
+            </div>
+            <img src="{{project.img}}" />
         </div>
-        <img src="assets/img/el_pollo_loco.png" />
-    </div>
-</article>
+    </article>
+</div>
