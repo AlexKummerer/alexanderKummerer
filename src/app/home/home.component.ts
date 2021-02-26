@@ -8,11 +8,16 @@ import { SlideshowComponent } from '../slideshow/slideshow.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild (ProjectsComponent)
+  private projComp: ProjectsComponent | undefined  ;
+  constructor() {}
 
   ngOnInit(): void {
   }
 
-
+  showPortfolio() {
+    this.projComp.portoCont.scrollIntoView();
+  }
 
 
 

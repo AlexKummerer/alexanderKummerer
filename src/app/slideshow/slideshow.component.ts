@@ -1,10 +1,9 @@
 import {
-  AfterViewInit,
   Component,
-  ElementRef,
+  EventEmitter,
   Input,
   OnInit,
-  ViewChild,
+  Output,
 } from '@angular/core';
 
 @Component({
@@ -13,6 +12,8 @@ import {
   styleUrls: ['./slideshow.component.scss'],
 })
 export class SlideshowComponent implements OnInit {
+
+
   images = ['img2.jpg'];
   currentImage = 0;
   showImage = true;
@@ -28,6 +29,8 @@ export class SlideshowComponent implements OnInit {
   currentarrow = 0;
   showArrow = true;
   @Input() portfolio: any;
+
+  constructor() {}
 
   ngOnInit() {
     this.updateImage();
@@ -68,8 +71,10 @@ export class SlideshowComponent implements OnInit {
     }, 5000);
   }
 
-  scroll() {
-    console.log(this.portfolio);
-    window.scrollTo();
+  @Output() showPortfolio: EventEmitter<any> = new EventEmitter();
+
+  scrollPortfolio() {
+    console.log(this.showPortfolio);
+    this.showPortfolio.emit(null);
   }
 }
