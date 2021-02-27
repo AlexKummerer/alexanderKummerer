@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -9,8 +9,11 @@ export class ProjectsComponent implements OnInit {
   @ViewChild("portfolio") private parentRef: ElementRef<HTMLElement> | undefined ;
   portoCont: HTMLElement | undefined;
 
+  
   ngAfterViewInit() {
-    this.portoCont = this.parentRef.nativeElement;
+    console.log("Projects ngAfterViewInit");
+    this.portoCont = this.parentRef?.nativeElement;
+    
   }
 
   constructor() { }

@@ -1,112 +1,124 @@
-header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 80px;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .example-spacer {
-        flex: 1 1 auto;
-    }
-    a {
-        color: white;
-        text-decoration: none;
-        margin-left: 32px;
-        font-weight: 600;
-        &:hover {
-            color: rgba(255, 255, 255, 0.8);
-        }
-    }
-}
-
-img {
-    height: 50px;
-    cursor: pointer;
-}
-
-.mat-toolbar {
-    background: transparent !important;
-}
-
-.material-icons {
-    font-size: 37px !important;
-}
-
-.mat-icon-button .mat-icon {
-    line-height: 37px;
-}
-
-.mat-icon {
-    height: 37px;
-    width: 37px;
-}
-
-.darkLinks {
-    a {
-        color: black;
-        &:hover {
-            color: rgba(0, 0, 0, 0.8);
-        }
-    }
-}
-
-.headerDark {
-    background-color: white;
-    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
-}
-
-.overlay-widget-bg {
-    z-index: 50;
-    position: fixed;
-    background-color: #151850;
-    background-color: #151850;
-    height: 100%;
-    width: 100%;
-    display: block;
-    opacity: 0.93;
-}
-
-.overlay-widget {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    right: auto;
-    left: 0;
-    top: 0;
-    z-index: 99;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    .inner {
-        width: 100%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 35%;
+    header {
+        position: fixed;
         left: 0;
-        height: auto;
+        right: 0;
+        top: 0;
+        height: 80px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .example-spacer {
+            flex: 1 1 auto;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            margin-left: 32px;
+            font-weight: 600;
+            &:hover {
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
     }
-    ul {
-        list-style: none;
-        text-align: center;
-        li {
-            a {
-                line-height: 65px;
-                font-size: 60px;
-                line-height: 60px;
-                font-family: 'Open Sans';
-                font-weight: 700;
-                letter-spacing: -1px;
-                text-decoration: none;
-                color: white;
-                opacity: 0.5;
-                &:hover {
-                    opacity: 0.8;
+    
+    img {
+        height: 50px;
+        cursor: pointer;
+    }
+    
+    .mat-toolbar {
+        background: transparent !important;
+    }
+    
+    .material-icons {
+        font-size: 37px !important;
+    }
+    
+    .mat-icon-button .mat-icon {
+        line-height: 37px;
+    }
+    
+    .mat-icon {
+        height: 37px;
+        width: 37px;
+    }
+    
+    .darkLinks {
+        a {
+            color: black;
+            &:hover {
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+    
+    .headerDark {
+        background-color: white;
+        box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .overlay-widget-bg {
+        z-index: 50;
+        position: fixed;
+        background-color: #151850;
+        background-color: #151850;
+        height: 100%;
+        width: 100%;
+        display: block;
+        opacity: 0.93;
+    }
+    
+    .overlay-widget {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        right: auto;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        .inner {
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 35%;
+            left: 0;
+            height: auto;
+        }
+        ul {
+            list-style: none;
+            text-align: center;
+            li {
+                a {
+                    line-height: 65px;
+                    font-size: 60px;
+                    line-height: 60px;
+                    font-family: 'Open Sans';
+                    font-weight: 700;
+                    letter-spacing: -1px;
+                    text-decoration: none;
+                    color: white;
+                    opacity: 0.5;
+                    &:hover {
+                        opacity: 0.8;
+                    }
                 }
             }
         }
     }
-}
+    
+    @media (max-width: 1000px) {
+        .overlay-widget {
+            ul {
+                li {
+                    a {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }

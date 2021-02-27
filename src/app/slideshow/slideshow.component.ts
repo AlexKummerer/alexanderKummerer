@@ -29,6 +29,7 @@ export class SlideshowComponent implements OnInit {
   currentarrow = 0;
   showArrow = true;
   @Input() portfolio: any;
+  @Output() showPortfolio = new EventEmitter();
 
   constructor() {}
 
@@ -69,9 +70,8 @@ export class SlideshowComponent implements OnInit {
         this.showArrow = true;
       }, 3);
     }, 5000);
-  }
+  };
 
-  @Output() showPortfolio: EventEmitter<any> = new EventEmitter();
 
   scrollPortfolio() {
     console.log(this.showPortfolio);

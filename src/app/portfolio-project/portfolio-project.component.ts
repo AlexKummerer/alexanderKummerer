@@ -24,7 +24,7 @@ export class PortfolioProjectComponent implements OnInit {
       JsDoc: '#',
       link:
         'http://gruppe-51b.developerakademie.com/index.html',
-      img: 'assets/img/el_pollo_loco.png',
+      img: 'assets/img/join.png',
     },
     {
       name: 'Alex bringts...',
@@ -33,7 +33,7 @@ export class PortfolioProjectComponent implements OnInit {
       JsDoc: '#',
       link:
         'http://alexander-kummerer.developerakademie.com/lieferando/index.html',
-      img: 'assets/img/el_pollo_loco.png',
+      img: 'assets/img/alexbringts.png',
     },
 
   ];

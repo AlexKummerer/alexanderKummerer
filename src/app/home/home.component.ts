@@ -12,14 +12,17 @@ export class HomeComponent implements OnInit {
   private projComp: ProjectsComponent | undefined  ;
   constructor() {}
 
+
+
   ngOnInit(): void {
   }
 
+  
   showPortfolio() {
-    this.projComp.portoCont.scrollIntoView();
-  }
-
-
-
+    console.log('asadsadsadsasd');
+    document.getElementById('portfolio').scrollIntoView({
+      behavior: 'smooth'
+    });  
+  } 
 
 }

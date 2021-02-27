@@ -26,6 +26,9 @@
         flex-direction: column;
         .column-container {
             width: 100%;
+            div {
+                padding: 8% !important;
+            }
         }
     }
 }
