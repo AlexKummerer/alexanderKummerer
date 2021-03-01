@@ -21,7 +21,7 @@ export class PortfolioProjectComponent implements OnInit {
       name: 'Join',
       discription:
         'This is a Task Manager app. You can create a Task, and it will sort into an "Eisenhower Matrix", due to Urgency and Importance. In the Eisenhower Matrix you can drag and drop your Task',
-      JsDoc: '#',
+      JsDoc: 'http://gruppe-51b.developerakademie.com/js/out/index.html',
       link:
         'http://gruppe-51b.developerakademie.com/index.html',
       img: 'assets/img/join.png',
@@ -30,7 +30,7 @@ export class PortfolioProjectComponent implements OnInit {
       name: 'Alex bringts...',
       discription:
         'In this project you can order meals. The meals will load from JSON. When you set your order, it will generate a new orderedMeal JSON',
-      JsDoc: '#',
+      JsDoc: 'http://alexander-kummerer.developerakademie.com/lieferando/js/out/index.html',
       link:
         'http://alexander-kummerer.developerakademie.com/lieferando/index.html',
       img: 'assets/img/alexbringts.png',
