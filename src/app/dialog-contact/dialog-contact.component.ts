@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -11,7 +11,7 @@ export class DialogContactComponent implements OnInit {
   failureMsg = 'Please try again.';
   icon = 'exclamation-triangle';
   constructor( public dialogRef: MatDialogRef<DialogContactComponent>,
-    @inject(MAT_DIALOG_DATA) public data: any) {}
+      @Inject(MAT_DIALOG_DATA) public data: any) {}
 
   ngOnInit(): void {
     // Display dialog-msg according to server response for transmission

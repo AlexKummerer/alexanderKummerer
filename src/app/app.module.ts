@@ -29,7 +29,11 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { DialogContactComponent } from './dialog-contact/dialog-contact.component';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef,MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 @NgModule({
   declarations: [
@@ -49,6 +53,7 @@ import { MatDialogRef } from '@angular/material/dialog';
     AboutDetailsComponent,
     ContactComponent,
     DialogContactComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -65,11 +70,16 @@ import { MatDialogRef } from '@angular/material/dialog';
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    MatDialogModule,
+
   ],
-  providers: [ {
-    provide: MatDialogRef,
-    useValue: {}
-  },],
+  providers: [
+    {
+      provide: MatDialogRef,
+      useValue: {},
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -10,6 +10,7 @@ import {
 import { MatDialog } from '@angular/material/dialog';
 import { DialogContactComponent } from '../dialog-contact/dialog-contact.component';
 
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -21,11 +22,13 @@ export class ContactComponent implements OnInit, AfterViewInit {
   clicked: boolean;
   messageSent = false;
 
-  contactForm = new FormGroup({
-    name: new FormControl ( '' ,  Validators.required),
-    email: new FormControl ('', Validators.required),
-    subject:  new FormControl ( '' ,  Validators.required),
-    message:  new FormControl ( '' ,  Validators.required),
+  addressForm = this.fb.group({
+    company: null,
+    name: [null, Validators.required],
+    message: [null, Validators.required],
+    email: [null, Validators.required],
+    subject : [null, Validators.required]
+
   });
 
 
@@ -43,28 +46,29 @@ export class ContactComponent implements OnInit, AfterViewInit {
    * Send email with contact-form-data and reset form, if form is filled correctly
    * @param formDirective
    */
-  submitForm(formDirective: FormGroupDirective) {
+   submitForm(formDirective: FormGroupDirective) {
     if (formDirective.valid) {
       this.sendEmail(formDirective);
       this.submitted = true;
-      this.clicked = true;
-      setTimeout(() => {
-        this.clicked = false;
-      }, 60000); // Disables submitting for 60s
-    }
-  }
+     this.clicked = true;
+       setTimeout(() => {
+         this.clicked = false;
+       }, 60000); // Disables submitting for 60s
+     }
+   }
+
  // send email to server
   sendEmail(formDirective) {
-    .post('http://alexander-kummerer.developerakademie.com/send_mail.php', {
-      name: this.contactForm.controls['name'].value,
-      email: this.contactForm.controls['email'].value,
-      subject: this.contactForm.controls['subject'].value,
-      message: this.contactForm.controls['message'].value,
+    this.http.post('http://alexander-kummerer.developerakademie.com/send_mail.php', {
+      name: this.addressForm.controls['name'].value,
+      email: this.addressForm.controls['email'].value,
+      subject: this.addressForm.controls['subject'].value,
+      message: this.addressForm.controls['message'].value,
     })
     .subscribe(
       (success: any) => {
         this.openDialog(true);
-        this.contactForm.reset();
+        this.addressForm.reset();
         formDirective.resetForm();
       },
       (error: any) => {
@@ -96,9 +100,5 @@ export class ContactComponent implements OnInit, AfterViewInit {
     }) ;
 
   }
-
-
-  
-
 
 }
