@@ -1,4 +1,4 @@
-<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+<form [formGroup]="contactForm" (ngSubmit)="submitForm(contactDirective)">
     <mat-card class="shipping-card page-wrap">
         <mat-card-header>
             <mat-card-title>Contact</mat-card-title>
@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col">
                     <mat-form-field class="full-width">
-                        <input required matInput placeholder="Name" formControlName="name">
+                        <input required matInput placeholder="Name" formControlName="name" />
                         <mat-error *ngIf="addressForm.controls['name'].hasError('required')">
                             First name is <strong>required</strong>
                         </mat-error>
@@ -18,7 +18,7 @@
                 <div class="col">
                     <mat-form-field class="full-width">
                         <mat-label>Email</mat-label>
-                        <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+                        <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email" />
                         <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
                             Email is <strong>required</strong>
                         </mat-error>
@@ -26,12 +26,11 @@
                 </div>
             </div>
 
-
             <div class="row">
                 <div class="col">
                     <mat-form-field class="full-width">
                         <mat-label>Subject</mat-label>
-                        <input matInput placeholder="Subject" formControlName="subject">
+                        <input matInput placeholder="Subject" formControlName="subject" />
                         <mat-error *ngIf="addressForm.controls['subject'].hasError('required')">
                             A Subject <strong>required</strong>
                         </mat-error>
@@ -50,14 +49,11 @@
                     </mat-form-field>
                 </div>
             </div>
-
-
-
-
-
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="primary" type="submit">Submit</button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="clicked">
+        Submit
+      </button>
         </mat-card-actions>
     </mat-card>
 </form>

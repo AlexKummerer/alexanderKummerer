@@ -22,13 +22,14 @@ import { PortfolioProjectComponent } from './portfolio-project/portfolio-project
 import { FooterComponent } from './footer/footer.component';
 import { MoreComponent } from './more/more.component';
 import { AboutDetailsComponent } from './about-details/about-details.component';
-
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { DialogContactComponent } from './dialog-contact/dialog-contact.component';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ContactComponent } from './contact/contact.component';
     MoreComponent,
     AboutDetailsComponent,
     ContactComponent,
+    DialogContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,10 @@ import { ContactComponent } from './contact/contact.component';
     MatCardModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ {
+    provide: MatDialogRef,
+    useValue: {}
+  },],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
