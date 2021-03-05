@@ -12,7 +12,7 @@ export class PortfolioProjectComponent implements OnInit {
       name: 'El Pollo Loco',
       discription:
         ' This is an Mexican Jump and Run Game. You have to Jump over chicken and collect bottles. At the End of the Game you have to fight against a Pollo Loco.',
-      JsDoc: '#',
+      JsDoc: 'http://alexander-kummerer.developerakademie.com/el_pollo_loco/js/out/index.html',
       link:
         'http://alexander-kummerer.developerakademie.com/el_pollo_loco/index.html',
       img: 'assets/img/el_pollo_loco.png',

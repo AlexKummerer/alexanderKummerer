@@ -8,7 +8,7 @@
     height: 100vh;
     width: 100%;
     object-fit: cover;
-    animation: zoomIn 8s ease infinite;
+    animation: zoomIn 3s ease-in forwards;
 }
 
 @keyframes zoomIn {
@@ -108,7 +108,7 @@ a {
 }
 
 .fadeDown {
-    animation: fadeDownAnimation 1.5s infinite;
+    animation: fadeDownAnimation 2s ease-in-out infinite alternate;
 }
 
 @keyframes fadeDownAnimation {

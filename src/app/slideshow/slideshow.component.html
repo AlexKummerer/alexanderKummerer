@@ -1,15 +1,15 @@
 <div #target class="slideshow-container">
-    <img *ngIf="showImage" class="img-slideshow" src="assets/img/{{ images[currentImage] }}" />
+    <img class="img-slideshow " src="assets/img/img2.jpg " />
 </div>
 
-<div class="slideshow-container slideshow-overlay">
+<div class="slideshow-container slideshow-overlay ">
 
-    <p *ngIf="showImage" class="fadeIn">
+    <p *ngIf="showHeadline" class="fadeIn ">
         {{headlines[currentHeadline]}}
     </p>
 
 </div>
 
-<span class="material-icons fadeDown" title="Portfolio" (click)="scrollPortfolio()">
+<span class="material-icons fadeDown " title="Portfolio " (click)="scrollPortfolio() ">
     {{downward[currentarrow]}}
 </span>

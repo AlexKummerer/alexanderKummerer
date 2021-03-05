@@ -14,12 +14,11 @@ import {
 export class SlideshowComponent implements OnInit {
 
 
-  images = ['img2.jpg'];
-  currentImage = 0;
-  showImage = true;
+
+  
   headlines = [
     "I'm Alexander Kummerer",
-    'German Front-End Developer',
+    'German Speaking Front-End Developer',
     'Started to Code November 2020',
     'Turn your ideas into reality',
   ];
@@ -34,9 +33,9 @@ export class SlideshowComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.updateImage();
+
     this.updateHeadline();
-    this.updateArrow();
+   
   }
   updateHeadline() {
     setInterval(() => {
@@ -49,18 +48,7 @@ export class SlideshowComponent implements OnInit {
       }, 3);
     }, 5000);
   }
-
-  updateImage() {
-    setInterval(() => {
-      this.currentImage++;
-      this.currentImage = this.currentImage % this.images.length;
-      this.showImage = false;
-
-      setTimeout(() => {
-        this.showImage = true;
-      }, 3);
-    }, 5000);
-  }
+/*
   updateArrow() {
     setInterval(() => {
       this.currentarrow++;
@@ -71,7 +59,7 @@ export class SlideshowComponent implements OnInit {
       }, 3);
     }, 5000);
   };
-
+*/
 
   scrollPortfolio() {
     console.log(this.showPortfolio);

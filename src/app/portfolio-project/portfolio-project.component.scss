@@ -56,7 +56,7 @@
             margin: 0 auto;
             z-index: 1;
             background: #fff;
-            border-bottom: 1px solid #f1f1f1;
+            border-top: 1px solid #f1f1f1;
             display: flex;
             justify-content: space-between;
             img {
@@ -64,8 +64,8 @@
                 margin-left: 10%;
             }
             .page-wrap {
-                border-bottom: 1px solid #d4d2d2;
-                margin-bottom: 40px;
+                border-top: 1px solid #d4d2d2;
+                padding-top: 40px;
             }
         }
         
@@ -75,6 +75,10 @@
                 color: #706f6f;
                 font-size: 1.375em;
             }
+        }
+        
+        article {
+            border-bottom: none !important;
         }
         
         @media (max-width: 1500px) {

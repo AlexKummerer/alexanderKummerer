@@ -23,11 +23,11 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   
 
-  addressForm = this.fb.group({
-    name: [null, Validators.required, Validators.minLength(2)],
-    message: [null, Validators.required, Validators.minLength(5)],
-    email: [null, Validators.required ,Validators.email],
-    subject: [null, Validators.required, Validators.minLength(2)],
+  addressForm = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    message: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    subject: new FormControl('', [Validators.required, Validators.minLength(2)]),
   });
 
   constructor(
