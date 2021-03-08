@@ -17,7 +17,7 @@ import { DialogContactComponent } from '../dialog-contact/dialog-contact.compone
 })
 export class ContactComponent implements OnInit, AfterViewInit {
   //contact = new Contact();
-  submitted = false;
+
   clicked: boolean;
   messageSent = false;
 

@@ -11,7 +11,7 @@ export class PortfolioProjectComponent implements OnInit {
     {
       name: 'El Pollo Loco',
       discription:
-        'This is a Mexican Jump and Run Game.  You have to jump over chickens and collect Tabasco. In the end you have to defeat a Pollo Loco.',
+        'This is a Mexican Jump and Run Game.  You have to jump over chickens and collect Tabasco. In the final level, you have to defeat the Pollo Loco.',
       JsDoc: 'http://alexander-kummerer.developerakademie.com/el_pollo_loco/js/out/index.html',
       link:
         'http://alexander-kummerer.developerakademie.com/el_pollo_loco/index.html',
@@ -20,7 +20,7 @@ export class PortfolioProjectComponent implements OnInit {
     {
       name: 'Join',
       discription:
-        'This is a task manager app. After you create the task, it is assigned to an Eisenhower matrix.',
+        'This is a task manager app. After you have created the task, it will be assigned to a Eishower Matrix.',
       JsDoc: 'http://gruppe-51b.developerakademie.com/js/out/index.html',
       link:
         'http://gruppe-51b.developerakademie.com/index.html',
@@ -29,7 +29,7 @@ export class PortfolioProjectComponent implements OnInit {
     {
       name: 'Alex bringts...',
       discription:
-        'In this project you can order food. After you order, a JSON is generated.',
+        'This app makes easy online food ordering possible.',
       JsDoc: 'http://alexander-kummerer.developerakademie.com/lieferando/js/out/index.html',
       link:
         'http://alexander-kummerer.developerakademie.com/lieferando/index.html',
