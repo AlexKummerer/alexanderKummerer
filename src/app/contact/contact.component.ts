@@ -21,13 +21,13 @@ export class ContactComponent implements OnInit, AfterViewInit {
   clicked: boolean;
   messageSent = false;
 
+
   
 
   addressForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2)]),
     message: new FormControl('', [Validators.required, Validators.minLength(5)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    subject: new FormControl('', [Validators.required, Validators.minLength(2)]),
   });
 
   constructor(
@@ -56,19 +56,19 @@ export class ContactComponent implements OnInit, AfterViewInit {
       }, 60000); // Disables submitting for 60s
     }
   }
-*/
+  */
   // send email to server
+
+  /*
   sendEmail() {
     console.log("name", this.addressForm.controls['name'].value,)
     console.log("email", this.addressForm.controls['email'].value,)
-    console.log("subject", this.addressForm.controls['subject'].value,)
     console.log("name", this.addressForm.controls['message'].value,)
 
     this.http
-      .post('https://alexkummerer.de/send_mail.php', {
+      .post('http://alexkummerer.de/send_mail.php', {
         name: this.addressForm.controls['name'].value,
         email: this.addressForm.controls['email'].value,
-        subject: this.addressForm.controls['subject'].value,
         message: this.addressForm.controls['message'].value,
       })
       .subscribe(
@@ -78,6 +78,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
           //formDirective.resetForm();
         },
         (error: any) => {
+          console.error(error);
           this.openDialog(false);
         }
       );
@@ -92,4 +93,5 @@ export class ContactComponent implements OnInit, AfterViewInit {
       },
     });
   }
+  */
 }

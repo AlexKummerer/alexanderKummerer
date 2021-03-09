@@ -2,7 +2,7 @@
 cors();
 ########### CONFIG ###############
 
-$recipient = 'developer@alexkummerer.de;
+$recipient = 'developer@alexkummerer.de';
 $redirect = 'index.html';
 
 ########### CONFIG END ###########
