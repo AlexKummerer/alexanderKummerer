@@ -47,10 +47,11 @@
         }
         .about {
             width: 95%;
-            height: 500px;
-            padding: 0 16 px;
+            height: 100%;
+            padding: 0 24 px;
             h1 {
                 font-size: 35px;
+                word-break: break-word;
             }
         }
     }
