@@ -8,6 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { DialogContactComponent } from '../dialog-contact/dialog-contact.component';
 
 @Component({
@@ -20,22 +21,25 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   clicked: boolean;
   messageSent = false;
-
-
-  
+  submitted = false;
 
   addressForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    message: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    message: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+    ]),
     email: new FormControl('', [Validators.required, Validators.email]),
   });
+  
 
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
   ) {}
-  
+
   ngAfterViewInit(): void {}
   ngOnInit(): void {}
 
@@ -44,7 +48,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
    * @param formDirective
    */
 
-   /*
+  /*
   submitForm(formDirective: FormGroupDirective) {
     if (formDirective.valid) {
       console.log(formDirective.valid)
@@ -59,17 +63,50 @@ export class ContactComponent implements OnInit, AfterViewInit {
   */
   // send email to server
 
-  /*
-  sendEmail() {
-    console.log("name", this.addressForm.controls['name'].value,)
-    console.log("email", this.addressForm.controls['email'].value,)
-    console.log("name", this.addressForm.controls['message'].value,)
+  async sendMail() {
+    try {
+      const formData = new FormData();
+      formData.append('name', this.addressForm.controls['name'].value);
+      formData.append('message', this.addressForm.controls['message'].value);
+      formData.append('email', this.addressForm.controls['email'].value);
+      let url = 'http://alexander-kummerer.developerakademie.com/send_mail.php';
+      let response = await fetch(url, {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+        redirect: 'follow', // manual, *follow, error
+        referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: formData, // body data type must match "Content-Type" header
+      });
+      this.openDialog(true);
+      this.router.navigate(['/'])
+      //this.addressForm.reset();
+    } catch (error) {
+      console.error(error);
+      this.openDialog(false);
+    }
+  }
 
-    this.http
-      .post('http://alexkummerer.de/send_mail.php', {
+  openDialog(messageSent) {
+    this.messageSent = messageSent;
+    this.dialog.open(DialogContactComponent, {
+      data: {
+        messageSent: messageSent,
+      },
+    });
+  }
+
+  /*
+   sendEmail() {
+   
+
+     this.http
+      .post('http://alexander-kummerer.developerakademie.com/send_mail.php', {
         name: this.addressForm.controls['name'].value,
         email: this.addressForm.controls['email'].value,
-        message: this.addressForm.controls['message'].value,
+        message:this.addressForm.controls['message'].value
+
       })
       .subscribe(
         (success: any) => {
@@ -93,5 +130,8 @@ export class ContactComponent implements OnInit, AfterViewInit {
       },
     });
   }
-  */
+*/
+}
+function subscribe(arg0: (success: any) => void, arg1: (error: any) => void) {
+  throw new Error('Function not implemented.');
 }
