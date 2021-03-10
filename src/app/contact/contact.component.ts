@@ -69,7 +69,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
       formData.append('name', this.addressForm.controls['name'].value);
       formData.append('message', this.addressForm.controls['message'].value);
       formData.append('email', this.addressForm.controls['email'].value);
-      let url = 'http://alexander-kummerer.developerakademie.com/send_mail.php';
+      let url = 'https://alexkummerer.de/send_mail.php';
       let response = await fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
