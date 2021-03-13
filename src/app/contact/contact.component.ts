@@ -132,6 +132,3 @@ export class ContactComponent implements OnInit, AfterViewInit {
   }
 */
 }
-function subscribe(arg0: (success: any) => void, arg1: (error: any) => void) {
-  throw new Error('Function not implemented.');
-}
