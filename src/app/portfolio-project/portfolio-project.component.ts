@@ -9,6 +9,17 @@ import { generate } from 'rxjs';
 export class PortfolioProjectComponent implements OnInit {
   projects = [
     {
+      name: 'Ring of Fire',
+      discription:
+        'This is one of the most famous drinking card games',
+      JsDoc: 'http://alexander-kummerer.developerakademie.com/ringoffire/documentation/overview.html',
+      link:
+        'https://ring-of-fire-8de7f.web.app',
+      img: 'assets/img/ringoffire.png',
+    },
+
+
+    {
       name: 'El Pollo Loco',
       discription:
         'This is a Mexican Jump and Run Game.  You have to jump over chickens and collect Tabasco. In the final level, you have to defeat the Pollo Loco.',
