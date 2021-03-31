@@ -80,8 +80,8 @@ export class ContactComponent implements OnInit, AfterViewInit {
         body: formData, // body data type must match "Content-Type" header
       });
       this.openDialog(true);
-      this.router.navigate(['/contact'])
-      //this.addressForm.reset();
+      this.router.navigate(['/'])
+      this.addressForm.reset();
     } catch (error) {
       console.error(error);
       this.openDialog(false);
